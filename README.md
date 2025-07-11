@@ -55,7 +55,7 @@ python train.py
 train.py expects: 
 ``` 
 data/BIPED/imgs/train/rgbr/real # RGB training images
-data/BIPED/edge_maps/train/rgbr/real. # Matching edge masks
+data/BIPED/edge_maps/train/rgbr/real # Matching edge masks
 ```
 
 Checkpoints drop into models/ after every epoch.
@@ -72,4 +72,3 @@ requirements.txt
 LICENSE         MIT
 README.md
 ```
-::contentReference[oaicite:0]{index=0}
