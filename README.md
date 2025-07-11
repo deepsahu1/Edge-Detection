@@ -31,17 +31,16 @@ A custom-trained **U-Net (ResNet-34 encoder)** does the heavy lifting; its logit
 ## 🚀 Quick start (inference)
 
 ```bash
-python -m venv .venv && source .venv/bin/activate         # Windows: .venv\Scripts\activate
+# 1 – (optional) create & activate a clean env
+python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
+
+# 2 – install dependencies
 pip install -r requirements.txt
 
-# edit paths in predict.py __main__ block *or* call the function manually:
-python - <<'PY'
-from predict import predict
-predict(
-    input_dir="examples/originals",
-    model_path="models/unet_biped_epoch_92.pth"
-)
-PY
+# 3 – run inference
+#    • edit the two paths at the bottom of predict.py
+#    • then simply:
+python predict.py
 ```
 ## 🏋️‍♂️ Training from scratch
 ```bash
