@@ -1,0 +1,15 @@
+# Ignore dataset and outputs
+data/
+output/
+results/
+__pycache__/
+*.pth
+*.pt
+*.h5
+*.zip
+*.tar.gz
+*.tgz
+
+# Ignore system files
+.DS_Store
+Thumbs.db
