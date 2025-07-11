@@ -7,9 +7,9 @@ A custom-trained **U-Net (ResNet-34 encoder)** does the heavy lifting; its logit
 
 | Original → Prediction |
 |-----------------------|
-| ![](examples/RGB_070_comparison.png) |
-| ![](examples/RGB_090_comparison.png) |
-| ![](examples/RGB_138_comparison.png) |
+| ![](examples/example_1.png) |
+| ![](examples/example_2.png) |
+| ![](examples/example_3.png) |
 
 <sub><sup>More results in <code>examples/</code> (10 curated side-by-side images)</sup></sub>
 
