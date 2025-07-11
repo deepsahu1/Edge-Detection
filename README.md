@@ -41,15 +41,22 @@ pip install -r requirements.txt
 #    • edit the two paths at the bottom of predict.py
 #    • then simply:
 python predict.py
+# outputs are written to output/edges/ and results/
 ```
 ## 🏋️‍♂️ Training from scratch
 ```bash
+# 1-liner: grab BIPED (~230 MB) via Kaggle CLI
+kaggle datasets download -d xavysp/biped -p data --unzip
+# ⤷  extracts to data/BIPED/…
+
+# adjust the two paths at the bottom of train.py if needed, then:
 python train.py
 ```
-train.py expects BIPED images in data/BIPED/imgs/train/rgbr/real
-and matching edge masks in data/BIPED/edge_maps/train/rgbr/real.
-
-Edit those two paths at the bottom of train.py if your dataset lives elsewhere.
+train.py expects: 
+``` 
+data/BIPED/imgs/train/rgbr/real # RGB training images
+data/BIPED/edge_maps/train/rgbr/real. # Matching edge masks
+```
 
 Checkpoints drop into models/ after every epoch.
 
@@ -60,8 +67,9 @@ src/            dataset.py, model.py (U-Net factory)
 train.py        fine-tunes U-Net on BIPED masks
 predict.py      generates edge maps + comparison collages
 examples/       10 cherry-picked results for the README
-models/         (git-ignored) trained .pth files go here
-data/           (git-ignored) datasets live here
 requirements.txt
+.gitignore
+LICENSE         MIT
 README.md
 ```
+::contentReference[oaicite:0]{index=0}
